@@ -37,9 +37,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
-<!--            <include-->
-<!--                layout="@layout/fragment_cat_item_list"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
+            <!--            <include-->
+            <!--                layout="@layout/fragment_cat_item_list"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
             <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
@@ -52,18 +52,6 @@
                 tools:listitem="@layout/fragment_cat_item" />
 
         </androidx.core.widget.NestedScrollView>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/brown_500"
-            app:menu="@menu/bottom_menu"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

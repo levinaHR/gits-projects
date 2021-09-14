@@ -42,13 +42,13 @@ public class HomeFragment extends Fragment {
     }
 
     private void createCatList() {
-        String[] titles = {"Owner", "Chief Operator", "Right Hand Man", "The Register", "The Barista", "The Waiter"};
+        String[] titles = {"The Owner", "The Chief Operator", "The Right Hand Man", "The Register", "The Barista", "The Waiter"};
         String[] descs = {"A rather curvaceous bundle of sugary-sweet ambition, Mitzi is Atlas' widow and the current owner of the Lackadaisy establishment.",
                 "The imposing, glaring, surly, one-eyed Slovak with knees that won't bend, employee at the Lackadaisy Coffeeshop, and now under Mitzi May.",
                 "A former employee of Lackadaisy in its glory days, he's been described as Atlas' \"Golden boy\" by Mitzi May.",
                 "A bright, friendly girl who works behind the till at the Lackadaisy Cafe. Atlas May was a friend of her father and was her godfather.",
                 "Rocky is, to put it mildly, eccentric, prone to rash behaviour, manic grins and general foolishness.",
-                "He got the nickname Freckle as when he was very young, Rocky shaved off all the fur on his little cousin's face to discover that he had a single freckle."};
+                "He got the nickname Freckle as when he was very young, Rocky shaved all the fur on his face to discover that he had a single freckle."};
         int[] pics = {R.drawable.mitzy, R.drawable.viktor, R.drawable.mordecai, R.drawable.pepper, R.drawable.rocky, R.drawable.calvin};
         int count = 0;
 
