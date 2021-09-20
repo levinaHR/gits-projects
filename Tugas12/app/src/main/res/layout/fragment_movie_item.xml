@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MovieItemFragment">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:id="@+id/movie_cv"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="@color/black">
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,37 +24,26 @@
 
             <ImageView
                 android:id="@+id/movie_image"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/movie_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/movie_image"
+                android:layout_below="@+id/movie_image"
                 android:background="@color/orange_500"
-                android:text="Lorem"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="Lorem Ipsum Dolor Sit"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="21dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/movie_overview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="Lorem Ipsum"
-                android:layout_toRightOf="@+id/movie_image"
-                android:layout_below="@+id/movie_title"
-                android:layout_margin="5dp"/>
 
         </RelativeLayout>
 
 
-
-
-
     </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

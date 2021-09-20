@@ -1,6 +1,7 @@
 package com.levinahr.asus.tugas12;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -38,7 +40,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
         MovieModel movie = movieList.get(position);
         holder.title.setText(movie.getTitle());
-        holder.overview.setText(movie.getOverview());
 
         // Glide to display image
         RequestOptions requestOptions = new RequestOptions();
@@ -48,6 +49,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 .setDefaultRequestOptions(requestOptions)
                 .load(BuildConfig.IMAGE + movieList.get(position).getPosterPath())
                 .into(holder.image);
+
+        holder.cardView.setOnClickListener(view -> {
+            Intent intent = new Intent(movieContext, MovieDetailActivity.class);
+            intent.putExtra("backdrop", BuildConfig.IMAGE + movieList.get(position).getBackdropPath());
+            intent.putExtra("detail", movieList.get(position).getOverview());
+
+            movieContext.startActivity(intent);
+        });
     }
 
     @Override
@@ -57,15 +66,15 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     public static class MovieViewHolder extends RecyclerView.ViewHolder {
         TextView title;
-        TextView overview;
         ImageView image;
+        CardView cardView;
 
         public MovieViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.movie_title);
-            overview = itemView.findViewById(R.id.movie_overview);
             image = itemView.findViewById(R.id.movie_image);
+            cardView = itemView.findViewById(R.id.movie_cv);
         }
     }
 }
