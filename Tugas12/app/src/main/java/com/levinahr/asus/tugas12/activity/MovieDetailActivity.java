@@ -69,7 +69,8 @@ public class MovieDetailActivity extends AppCompatActivity {
 
                 for (MovieModel movie : movieModels) {
                     if (movie.getTitle().equals(title)) {
-//                        if (!favs.contains(movie)) {    //entah kenapa MovieModel@blabla nya berubah mulu jadi selalu true
+                        //entah kenapa MovieModel@blabla nya berubah mulu jadi if favs contains movie selalu true :(
+//                        if (!favs.contains(movie)) {
 //                            favoriteDb.myDao().addMovie(movie);
 //                            Toast.makeText(view.getContext(), "Movie added to favorites", Toast.LENGTH_SHORT).show();
 //
@@ -79,17 +80,22 @@ public class MovieDetailActivity extends AppCompatActivity {
 //                        }
 
                         if (favs.size() != 0) {
+                            boolean isExist = false;
+
                             for (MovieModel fav : favs) {
                                 if (fav.getTitle().equals(movie.getTitle())) {
-                                    favoriteDb.myDao().deleteMovie(movie);
-                                    Toast.makeText(view.getContext(), "Movie removed from favorites", Toast.LENGTH_SHORT).show();
-
-                                } else {
-                                    favoriteDb.myDao().addMovie(movie);
-                                    Toast.makeText(view.getContext(), "Movie added to favorites", Toast.LENGTH_SHORT).show();
+                                    isExist = true;
+                                    break;
                                 }
+                            }
 
-                                break;
+                            if (isExist) {
+                                favoriteDb.myDao().deleteMovie(movie);
+                                Toast.makeText(view.getContext(), "Movie removed from favorites", Toast.LENGTH_SHORT).show();
+
+                            } else {
+                                favoriteDb.myDao().addMovie(movie);
+                                Toast.makeText(view.getContext(), "Movie added to favorites", Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
