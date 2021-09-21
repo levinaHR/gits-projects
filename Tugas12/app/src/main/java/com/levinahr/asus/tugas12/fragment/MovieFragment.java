@@ -1,4 +1,4 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.levinahr.asus.tugas12.adapter.MovieAdapter;
+import com.levinahr.asus.tugas12.R;
+import com.levinahr.asus.tugas12.model.TopRatedResponse;
+import com.levinahr.asus.tugas12.api.ApiService;
+import com.levinahr.asus.tugas12.api.InitRetrofit;
+import com.levinahr.asus.tugas12.model.MovieModel;
 
 import java.util.ArrayList;
 import java.util.Objects;

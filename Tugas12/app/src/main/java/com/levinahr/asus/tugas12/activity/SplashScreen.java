@@ -1,10 +1,13 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.levinahr.asus.tugas12.R;
+import com.levinahr.asus.tugas12.activity.MainActivity;
 
 public class SplashScreen extends AppCompatActivity {
 

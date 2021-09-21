@@ -1,4 +1,4 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -10,6 +10,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.levinahr.asus.tugas12.R;
+import com.levinahr.asus.tugas12.fragment.FavoriteFragment;
+import com.levinahr.asus.tugas12.fragment.MovieFragment;
+import com.levinahr.asus.tugas12.fragment.TvShowFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavView;

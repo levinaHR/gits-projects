@@ -1,4 +1,7 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.api;
+
+import com.levinahr.asus.tugas12.BuildConfig;
+import com.levinahr.asus.tugas12.model.TopRatedResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

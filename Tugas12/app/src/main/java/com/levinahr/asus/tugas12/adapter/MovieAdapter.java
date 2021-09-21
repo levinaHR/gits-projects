@@ -1,4 +1,4 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.levinahr.asus.tugas12.BuildConfig;
+import com.levinahr.asus.tugas12.activity.MovieDetailActivity;
+import com.levinahr.asus.tugas12.R;
+import com.levinahr.asus.tugas12.model.MovieModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +58,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             Intent intent = new Intent(movieContext, MovieDetailActivity.class);
             intent.putExtra("backdrop", BuildConfig.IMAGE + movieList.get(position).getBackdropPath());
             intent.putExtra("detail", movieList.get(position).getOverview());
+            intent.putExtra("title", movieList.get(position).getTitle());
 
             movieContext.startActivity(intent);
         });

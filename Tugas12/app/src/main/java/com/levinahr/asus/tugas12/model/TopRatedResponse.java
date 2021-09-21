@@ -1,7 +1,8 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.model;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
+import com.levinahr.asus.tugas12.model.MovieModel;
 
 public class TopRatedResponse{
 

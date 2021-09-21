@@ -1,4 +1,4 @@
-package com.levinahr.asus.tugas12;
+package com.levinahr.asus.tugas12.fragment;
 
 import android.os.Bundle;
 
@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TvShowFragment extends Fragment {
+import com.levinahr.asus.tugas12.R;
+
+public class MovieItemFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,6 @@ public class TvShowFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tv_show, container, false);
+        return inflater.inflate(R.layout.fragment_movie_item, container, false);
     }
 }
