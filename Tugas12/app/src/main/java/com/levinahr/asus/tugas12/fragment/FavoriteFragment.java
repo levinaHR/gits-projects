@@ -67,4 +67,13 @@ public class FavoriteFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         clearFavorites();
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        favList = favoriteDb.myDao().getMovieList();
+        movieAdapter = new MovieAdapter(getActivity(), favList);
+        recyclerView.setAdapter(movieAdapter);
+    }
 }
