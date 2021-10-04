@@ -3,6 +3,7 @@
     package="com.levinahr.asus.catdoption">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Catdoption"
         android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".activity.DetailActivity"
@@ -24,11 +38,7 @@
         <activity
             android:name=".activity.HomeActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity

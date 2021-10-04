@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiConfig {
     public static ApiService getApiService(){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.5/Android/Catdoption/")
+                .baseUrl("http://192.168.1.8/Android/Catdoption/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiService service = retrofit.create(ApiService.class);

@@ -2,6 +2,7 @@ package com.levinahr.asus.catdoption.rest;
 
 import com.levinahr.asus.catdoption.model.CatModel;
 import com.levinahr.asus.catdoption.model.ResponseErrorModel;
+import com.levinahr.asus.catdoption.model.UserModel;
 
 import java.util.List;
 
@@ -12,6 +13,14 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiService {
+    @POST("login/register.php")
+    @FormUrlEncoded
+    Call<UserModel> register(@Field("username") String username, @Field("password") String password);
+
+    @POST("login/login.php")
+    @FormUrlEncoded
+    Call<UserModel> login(@Field("username") String username, @Field("password") String password);
+
     @GET("cat/api_get.php?all")
     Call<List<CatModel>> getAllCatList();
 
