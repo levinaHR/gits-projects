@@ -30,4 +30,21 @@
     <string name="save">Save</string>
     <string name="delete">Delete</string>
 
+    <!-- Strings for On Boarding Screen -->
+
+    <!--Titles-->
+    <string name="first_slide_title">Welcome to Catdoption</string>
+    <string name="second_slide_title">Adopt a Cat</string>
+    <string name="third_slide_title">Lifelong Friend</string>
+
+    <!--Descriptions-->
+    <string name="first_slide_desc">The cats we have here are rescue cats\nand all of them have been neutered/sterilized.</string>
+    <string name="second_slide_desc">Every cat you adopt means a new\nfree space for us to rescue another one.</string>
+    <string name="third_slide_desc">Your everyday life will never get boring\nwith these little furballs as your companion.</string>
+
+    <!--Buttons-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Count Mew In!</string>
+
 </resources>
